@@ -1,0 +1,480 @@
+{
+    "id": 1,
+    "label": "patient",
+    "outE": {
+        "tested": [
+            {
+                "inV": 3, //sars cov node
+                "properties": {
+                    "result": "positive"
+                }
+            }
+        ],
+        "admitted to": [
+            {
+                "inV": 4 //no care ward
+            }
+        ],
+        "measured": [
+            {
+                "inV": 8, //lymphocytes
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value":-0.048383266
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 9, //leukocytes
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.42019704
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 10, //basophils
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 1.303528786
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 11, //neutrophils
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.414214939
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 12, //eosinophils
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.498392642
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 13, //hematocrit
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 0.991838217
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 14, //hemoglobin
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 0.792187631
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 15, //monocytes
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 1.933339357
+                    }
+                }
+            }
+        ]
+    },
+    "properties": {
+        "name":  "4382f5ea05e60c4", //patientid
+        "age_quantile": 2
+    }
+}
+{
+    "id": 2,
+    "label": "patient",
+    "outE": {
+        "tested": [
+            {
+                "inV": 3, //sars cov node
+                "properties": {
+                    "result": "positive"
+                }
+            }
+        ],
+        "admitted to": [
+            {
+                "inV": 7 //intensive care ward
+            }
+        ],
+        "measured": [
+            {
+                "inV": 8, //lymphocytes
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 0.386598021
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 9, //leukocytes
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.445242077
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 10, //basophils
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.223766506
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 11, //neutrophils
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.094616175
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 12, //eosinophils
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.751228929
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 13, //hematocrit
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 1.312278628
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 14, //hemoglobin
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 1.60671556
+                    }
+                }
+            }
+        ],
+        "measured": [
+            {
+                "inV": 15, //monocytes
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.14145419
+                    }
+                }
+            }
+        ]
+    },
+    "properties": {
+        "name": "66342a96fc1f90b", //patientid
+        "age_quantile": 14
+    }
+}
+{
+    "id": 3,
+    "label": "SARS-Cov-2 Test Result",
+    "inE": {
+        "tested": [
+            {
+                "outV": 1,
+                "properties": {
+                    "result": "positive"
+                }
+            },
+            {
+                "outV": 2,
+                "properties": {
+                    "result": "positive"
+                }
+            },
+        ]
+    },
+}
+{
+    "id": 4,
+    "label": "no care ward",
+    "inE": {
+        "admitted to": [
+            {
+                "outV": 1,
+            }
+        ]
+    },
+}
+{
+    "id": 5,
+    "label": "regular ward",
+}
+{
+    "id": 6,
+    "label": "semi-intensive unit",
+}
+{
+    "id": 7,
+    "label": "intensive care unit",
+    "inE": {
+        "admitted to": [
+            {
+                "outV": 2,
+            }
+        ]
+    },
+}
+{
+    "id": 8,
+    "label": "lymphocytes",
+    "inE": {
+        "measured": [
+            {
+                "outV": 1,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value":-0.048383266
+                    }
+                }
+            },
+            {
+                "outV": 2,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 0.386598021
+                    }
+                }
+            }
+        ]
+    },
+}
+{
+    "id": 9,
+    "label": "leukocytes",
+    "inE": {
+        "measured": [
+            {
+                "outV": 1,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value":-0.42019704
+                    }
+                }
+            },
+            {
+                "outV": 2,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.445242077
+                    }
+                }
+            }
+        ]
+    },
+}
+{
+    "id": 10,
+    "label": "basophils",
+    "inE": {
+        "measured": [
+            {
+                "outV": 1,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value":1.303528786
+                    }
+                }
+            },
+            {
+                "outV": 2,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.223766506
+                    }
+                }
+            }
+        ]
+    },
+}
+{
+    "id": 11,
+    "label": "neutrophils",
+    "inE": {
+        "measured": [
+            {
+                "outV": 1,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.414214939
+                    }
+                }
+            },
+            {
+                "outV": 2,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.094616175
+                    }
+                }
+            }
+        ]
+    },
+}
+{
+    "id": 12,
+    "label": "eosinophils",
+    "inE": {
+        "measured": [
+            {
+                "outV": 1,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value":-0.498392642
+                    }
+                }
+            },
+            {
+                "outV": 2,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.751228929
+                    }
+                }
+            }
+        ]
+    },
+}
+{
+    "id": 13,
+    "label": "hematocrit",
+    "inE": {
+        "measured": [
+            {
+                "outV": 1,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value":0.991838217
+                    }
+                }
+            },
+            {
+                "outV": 2,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 1.312278628
+                    }
+                }
+            }
+        ]
+    },
+}
+{
+    "id": 14,
+    "label": "hemoglobin",
+    "inE": {
+        "measured": [
+            {
+                "outV": 1,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value":0.792187631
+                    }
+                }
+            },
+            {
+                "outV": 2,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": 1.60671556
+                    }
+                }
+            }
+        ]
+    },
+}
+{
+    "id": 15,
+    "label": "monocytes",
+    "inE": {
+        "measured": [
+            {
+                "outV": 1,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value":1.933339357
+                    }
+                }
+            },
+            {
+                "outV": 2,
+                "properties": {
+                    "result": { 
+                        "type": "g:Double",
+                        "value": -0.14145419
+                    }
+                }
+            }
+        ]
+    },
+}
